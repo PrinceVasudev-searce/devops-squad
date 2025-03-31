@@ -4,5 +4,5 @@ phases:
   build:
     commands:
       - echo Deploying to EKS...
-      - aws eks update-kubeconfig --region 088585194665 --name devops-squad-poc
+      - aws eks update-kubeconfig --region ap-south-1 --name devops-squad-poc
       - kubectl apply -f k8s-deployment.yaml
