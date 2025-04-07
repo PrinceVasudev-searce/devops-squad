@@ -6,8 +6,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 088585194665.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=088585194665.dkr.ecr.ap-south-1.amazonaws.com/princepoc
-      - IMAGE_TAG=latest
+      - export REPOSITORY_URI=088585194665.dkr.ecr.ap-south-1.amazonaws.com/princepoc
+      - export IMAGE_TAG=latest
   build:
     commands:
       - echo Building the Docker image...
